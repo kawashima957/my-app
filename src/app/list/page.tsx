@@ -4,10 +4,9 @@ import { useEffect, useState } from 'react';
 import { generateClient } from '@aws-amplify/api';
 import { listTodos } from '@/graphql/queries';
 import { Amplify } from 'aws-amplify';
-import awsmobile from '@/aws-exports';
+import awsExports from '@/aws-exports';
 
-
-Amplify.configure(awsmobile);
+// Amplify.configure(configure);
 
 export default function Home() {
   const client = generateClient();
