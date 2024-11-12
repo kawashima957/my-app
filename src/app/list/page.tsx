@@ -6,7 +6,7 @@ import { listTodos } from '@/graphql/queries';
 import { Amplify } from 'aws-amplify';
 import awsExports from '@/aws-exports';
 
-// Amplify.configure(configure);
+Amplify.configure(awsExports);
 
 export default function Home() {
   const client = generateClient();
