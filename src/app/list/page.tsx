@@ -6,6 +6,7 @@ import { listTodos } from '@/graphql/queries';
 import { Amplify } from 'aws-amplify';
 import awsmobile from '@/aws-exports';
 
+
 Amplify.configure(awsmobile);
 
 export default function Home() {
