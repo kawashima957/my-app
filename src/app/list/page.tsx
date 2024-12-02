@@ -38,6 +38,11 @@ export default function Home() {
     };
   
     const addTodo = async () => {
+      if (!newTodo.name.trim() || !newTodo.description.trim()) {
+        console.error('Name and description cannot be empty.');
+        return;
+      }
+
       try {
         const result = await API.graphql({
           query: createTodo,
